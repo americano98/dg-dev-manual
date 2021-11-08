@@ -1,0 +1,248 @@
+
+.menu{
+  position: fixed;
+  z-index: 1000;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: .4s transform ease-in-out;
+
+  &-active{
+    transform: translateX(0);
+  }
+
+  &-cursor_hide{
+    cursor: none;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background: url(//topdg.ru/wp-content/themes/dg/images/home-1__img-3.jpg) no-repeat center center;
+    background-size: cover;
+    width: 50vw;
+    height: 100%;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  
+  &__buttons{
+    position: fixed;
+    z-index: 1001;
+    top: 2em;
+    right: 2em;
+
+    @media (max-width: $md) {
+      top: 0;
+      right: inherit;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-active{
+      & .menu__button-menu{
+        width: 120px;
+    
+        &::before{
+          right: 20px;
+          width: 20px;
+          height: 20px;
+          background: url(//topdg.ru/wp-content/themes/dg/images/close-white.svg) no-repeat center center;
+          background-size: contain;
+        }
+    
+        & .menu__button_text{
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+  }
+
+  &__button{
+    position: relative;
+    background: #e31b46;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+
+    &:hover{
+      background: #e31b46*1.1;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      z-index: 10;
+      display: block;
+    }
+
+    &-menu{
+      &:hover{
+        width: 120px;
+  
+        & .menu__button_text{
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      &::before{
+        width: 36px;
+        height: 36px;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        background: url(//topdg.ru/wp-content/themes/dg/images/logo-white.svg) no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &-message{
+      position: absolute;
+      top: 90px;
+      right: 0;
+
+      @media (max-width: $md) {
+        position: relative;
+        top: inherit;
+        right: inherit;
+      }
+
+      &::before{
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(//topdg.ru/wp-content/themes/dg/images/menu-message.svg) no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &_text{
+      visibility: hidden;
+      padding-left: .7em;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 500;
+      transform: translateX(50%);
+      opacity: 0;
+      transition: .2s opacity ease .2s, .5s transform ease .1s;
+    }
+  }
+
+  &__content{
+    padding: 3em;
+    width: 50%;
+    overflow-y: auto;
+    height: 100%;
+
+    @media (max-width: $md) {
+      width: 100%;
+      padding: 100px 30px 30px;
+    }
+  }
+  
+  &__services{
+    &_title{
+      display: inline-block;
+      color: #222;
+      font-weight: 300;
+      font-size: 2em;
+      margin-bottom: .5em;
+    }
+    
+    &_list{
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: .4s opacity ease-in-out, .4s max-height ease-in-out;
+    }
+    
+    &_item{
+      margin-bottom: 1.5em;
+
+      &-active .menu__services_list{
+        visibility: visible;
+        max-height: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__sub{
+    margin-top: 5em;
+
+    &_title{
+      font-size: 2em;
+      margin-bottom: .5em;
+    }
+
+    &_filter{
+
+      &-link{
+        display: inline-block;
+        padding: .25em .5em;
+        border: 1px solid #222;
+        border-radius: 4px;
+        margin-right: .8em;
+        margin-bottom: 1em;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &--active{
+          border: 1px solid #e31b46;
+          color: #e31b46;
+        }
+      }
+    }
+
+    &_item{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
+      padding: 1em 0;
+
+      &-hide{
+        display: none;
+      }
+    }
+
+    &_items{
+      border-top: 1px solid #222;
+    }
+
+    &_text{
+      display: inline-block;
+      &-year{
+        width: 5em;
+      }
+      &-name{
+        flex: 1;
+      }
+    }
+  }
+}

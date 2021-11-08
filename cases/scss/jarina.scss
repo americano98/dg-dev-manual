@@ -1,0 +1,198 @@
+.jarina{
+
+  &__section-1{
+    background: #600605;
+    background: radial-gradient(circle closest-corner at 75%,#9e1314,#610606);
+    color: #fff;
+
+    
+    &__h1{
+      font-size: 4em;
+      line-height: 1;
+      text-transform: initial;
+      @media (max-width: $sm) {
+        font-size: 3em;
+      }
+    }
+    &__subtitle{
+      display: block;
+      font-size: 0.722em;
+      line-height: 1.153;
+    }
+
+    &__content{
+      margin-top: 1.5em;
+
+      &_item{
+        position: relative;
+        &:first-child{
+          padding-bottom: 2.2em;
+          margin-bottom: 2.3em;
+        }
+
+        &.li{
+          margin-bottom: 0.2em;
+        }
+        &:first-child:after{
+          content:'';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 8em;
+          background:#fff;
+          height: 1px;
+        }
+      }
+      &_link{
+        display: inline-block;
+        color: #fff;
+        margin: 0.5em 0;
+        text-decoration: underline;
+      }
+      
+    }
+    &__item_title{
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+    
+    &__col-rightside{
+      position: relative;
+    }
+    &__img_block{
+      margin-top: -7em;
+      width: 116%;
+      margin-left: -9%;
+
+      @media (max-width: $lg) {
+        margin-top: -3em;
+      }
+      @media (max-width: $sm) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+    &__img{
+      display: block;
+      width: 100%;
+      transform: scale(1.07);
+      @media (max-width: $md) {
+        margin-top: 1em;
+        transform: scale(1);
+      }
+    }
+
+    &__text{
+      margin-top: -1em;
+      padding-left: 18.75%;
+      line-height: 1.66;
+      &_title{
+        font-size: $fz-36;
+        font-weight: bold;
+      }
+      @media (max-width: $md) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__section-2{
+
+    &__title{
+      line-height: 1.333;
+    }
+    &__row{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 3.8em;
+      
+      @media (max-width: $sm) {
+        flex-direction: column;
+      }
+    }
+    &__item{
+      width: 50%;
+
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+    }
+    &__item-1{
+      padding-right: 1em;
+      @media (max-width: $sm) {
+        padding-right: 0;
+      }
+    }
+    &__ul{
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+    &__li{
+      position: relative;
+      list-style: none;
+      padding-left: 5.1em;
+      font-size: $fz-24;
+      margin-bottom: 1.5em;
+      @media (max-width: $lg) {
+        padding-left: 3.5em;
+      }
+    }
+    &__li:before{
+      content:'';
+      position: absolute;
+      left: 1em;
+      top: 0.4em;
+      width: 1.33em;
+      height: 1.33em;
+      background: url(https://topdg.ru/wp-content/themes/dg/images/jarina__section-2__li-arrow.png) no-repeat center top;
+      background-size: contain;
+    }
+    &__item-2{
+      background: #ef4400;
+      color: #fff;
+      font-size: 1.666em;
+      padding: 2.7em 1.25em 2.7em 2.5em;
+      line-height: 1.66;
+      font-weight: bold;
+      @media (max-width: $sm) {
+        padding: 1.25em;
+      }
+    }
+  }
+
+  &__section-3{
+    background: #f3f3f3;
+
+    &__text{
+      margin-top: 1.33em;
+    }
+    &__row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2em;
+      @media (max-width: $md) {
+        flex-wrap: wrap;
+      }
+    }
+    &__item{
+      height: 21em;
+      @media (max-width: $md) {
+        height: auto;
+        margin-bottom: 1em;
+        &-1{
+          width: 100%;
+        }
+      }
+    }
+    &__img{
+      display: block;
+      height: 100%;
+      @media (max-width: $md) {
+        height: auto;
+      }
+    }
+  }
+}
