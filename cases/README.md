@@ -22,16 +22,16 @@
 ### Структура HTML
 
 * Нейминг - [BEM-методология](https://ru.bem.info/) или ей подобная
-  * .case
-    * section.case__section-[id]
+  * .[caseName]
+    * section.[caseName]__section-[id]
       * .container - опционально
-        * h2.case__section-[id]__title
-        * img.case__section-[id]__img
-        * .case__section-[id]__content
-        * .case__section-[id]__items
-          * .case__section-[id]__item
-          * .case__section-[id]__item_title
-          * .case__section-[id]__img
+        * h2.[caseName]__section-[id]__title
+        * img.[caseName]__section-[id]__img
+        * .[caseName]__section-[id]__content
+        * .[caseName]__section-[id]__items
+          * .[caseName]__section-[id]__item
+          * .[caseName]__section-[id]__item_title
+          * .[caseName]__section-[id]__img
           * и т.д. и т.п.
 * [Пример](./jarina.html)
 * Используемые переменные (файл [vars.css](./scss/vars.scss))
@@ -39,7 +39,7 @@
 ### Структура SCSS
 * Файл
 ```
-.case {
+.[caseName] {
    &__section-[id]{
       &__title{
 
