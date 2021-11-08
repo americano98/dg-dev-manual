@@ -1,0 +1,23 @@
+$xlg: 1600px;
+$lg: 1310px;
+$md: 991px;
+$sm: 768px;
+$xs: 540px;
+$xxs: 360px;
+
+$fz-48: 2.666em;
+$fz-60: 3.333em;
+$fz-36: 2em;
+$fz-24: 1.333em;
+
+@media (max-width: $sm){
+  $fz-48: 2em;
+  $fz-60: 2.666em;
+  $fz-36: 1.5em;
+  $fz-24: 1.2em;
+}
+
+$dark-blue: #161824;
+$pink: #e31b47;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');

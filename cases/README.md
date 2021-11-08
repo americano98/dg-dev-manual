@@ -34,6 +34,7 @@
           * .case__section-[id]__img
           * и т.д. и т.п.
 * [Пример](./jarina.html)
+* Используемые переменные (файл [vars.css](./scss/vars.scss))
 
 ### Структура SCSS
 * Файл
